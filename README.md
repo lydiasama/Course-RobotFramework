@@ -18,7 +18,7 @@ brew cask install chromedriver
 `robot -i Testing [FileName].robot`
 
 ### change variable in script
-`robot -v [VariableName]:http://facebook.com [FileName].robot`
+`robot -v [VariableName]:[Value] [FileName].robot`
 
 
 ## Note
