@@ -18,10 +18,6 @@ Search
     ชานมไข่มุก        ชานมไข่มุก
 
 *** Keywords ***
-เข้าไปยังหน้าค้นหาของ google
-    Open Browser    ${URL}    browser=chrome
-    Maximize Browser Window
-
 Flow search in google
 # Template แบบที่ 2 : Template per Test Case  Ex. Success มี 2 Test Case  แต่ละ Test Case มี Template ของตัวเอง
 # แบบนี้ ถ้า Data ไหน Failed Test Case นั้นจะ Failed ไปเลย
