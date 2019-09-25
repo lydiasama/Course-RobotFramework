@@ -10,13 +10,11 @@ ${URL}    http://google.com
 ${XXX}    ${EMPTY}   # คือการประกาศตัวแปรแบบค่าว่าง
 
 *** Test Cases ***
-XXXX
+Search
     [Template]  Flow search in google
     #    keyword    #    Expected result
     เหล็กไหล         เหล็กไหล
     ชานมไข่มุก        ชานมไข่มุก
-
-
 
 *** Keywords ***
 เข้าไปยังหน้าค้นหาของ google
