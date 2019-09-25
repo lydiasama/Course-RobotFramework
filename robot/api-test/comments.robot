@@ -3,6 +3,11 @@ Library  RequestsLibrary
 Library  Collections
 
 *** Test Cases ***
+Flow 1
+    ${email}=   Get Comments
+    Log To Console    ${email}    
+
+*** Keywords ***
 Get Comments
     Create Session    api    https://jsonplaceholder.typicode.com
     ${response}=  Get Request    api    /comments
@@ -23,3 +28,4 @@ Get Comments
     Should Contain Match    ${response.json()[0]}    id
     Should Contain Match    ${response.json()[0]}    name
     Should Contain Match    ${response.json()[0]}    email
+    [Return]    ${response.json()[0]["email"]}
