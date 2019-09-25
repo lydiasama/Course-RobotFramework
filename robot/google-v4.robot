@@ -11,11 +11,13 @@ ${URL}    http://google.com
 ${XXX}    ${EMPTY}   # คือการประกาศตัวแปรแบบค่าว่าง
 
 *** Test Cases ***
-ค้นหาคำว่าเหล็กไหล    เหล็กไหล    เหล็กไหล
-ค้นหาคำว่าชานมไข่มุก    ชานมไข่มุก    ชานมไข่มุก
+#   Test Case Name    #    keyword    #    Expected result
+ค้นหาคำว่าเหล็กไหล            เหล็กไหล         เหล็กไหล
+ค้นหาคำว่าชานมไข่มุก           ชานมไข่มุก        ชานมไข่มุก
 
 *** Keywords ***
-Flow search in google   # สำหรับการทำ Data for test
+Flow search in google
+# Template แบบที่ 1 : จำนวน Test Case = จำนวน Data
     [Arguments]    ${keyword}   ${expectedResult}
     ค้นหาคำว่า "${keyword}"
     จะต้องเจอ "${expectedResult}" นะ
@@ -33,7 +35,7 @@ Flow search in google   # สำหรับการทำ Data for test
     ...    xpath://*[@id="tvcap"]/div/div/div/div[1]/h3/span    ${expected result}   # ... คือการต่อบรรทัด
     ${results}=    Get Text    id:resultStats
     Log To Console  ${results}
-    ${resultSplit}=  Split String  ${results}  separator=${SPACE}  max_split=3
+    ${resultSplit}=    Split String  ${results}  separator=${SPACE}  max_split=3
     Should Be Equal    ผลการค้นหาประมาณ    ${resultSplit}[0]
     Should Be Equal    รายการ    ${resultSplit}[2]
 
