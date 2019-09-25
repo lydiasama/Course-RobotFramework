@@ -1,6 +1,7 @@
 *** Settings ***
 # Library    FakerLibrary   # เอาไว้  Fake ข้อมูล Test
 Library  SeleniumLibrary
+Resource  ../resource/signup-success-resource.robot
 Suite Setup  Open Signup Page
 Suite Teardown  Close Browser
 
@@ -16,18 +17,19 @@ ${URL}    https://goo.gl/iCce7C
 
 *** Keywords ***
 Open Signup Page
-    Open Browser    ${URL}    browser=chrome
+    signup-success-resource.Open
 
 กรอกชื่อ "${firstname}" นามสกุล "${lastname}"
-    Input Text    id:firstname    ${firstname}
-    Input Text    id:lastname    ${lastname}
+    signup-success-resource.Fill in firstname "${firstname}"
+    signup-success-resource.Fill in lastname "${lastname}"
 
 กรอกข้อมูลที่อยู่ "${address}" "${zipcode}"
-    Input Text    id:address    ${address}
-    Input Text    id:zipcode    ${zipcode}
+    signup-success-resource.Fill in Address "${address}"
+    signup-success-resource.Fill in Zipcode "${zipcode}"
 
 Submit
     Click Button    id:signup
 
 ผลการสมัครสำเร็จ แสดงคำว่า Thank you
     Wait Until Page Contains    Thank you!
+    
