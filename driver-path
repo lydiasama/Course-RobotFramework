@@ -1,0 +1,3 @@
+/Users⁩/lydiasama⁩/Driver
+export DRIVER_HOME=/Users⁩/lydiasama⁩/Driver
+export PATH=.:$DRIVER_HOME:$PATH
