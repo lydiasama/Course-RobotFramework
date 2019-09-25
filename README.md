@@ -1,10 +1,12 @@
 # Robot Framework
 --------------------------------------------------------------------------
 ## Setup
-python -V
-pip -V
-pip install robotframework
-pip install robotframework-seleniumlibrary
+```
+  python -V
+  pip -V
+  pip install robotframework
+  pip install robotframework-seleniumlibrary
+```
 
 ## Open Browser ไม่ได้
 brew cask install chromedriver
@@ -13,10 +15,10 @@ brew cask install chromedriver
 `robot [FileName].robot`
 
 ### run  only Tags Testing
-```robot -i Testing `FileName`.robot```
+`robot -i Testing [FileName].robot`
 
 ### change variable in script
-```robot -v `VariableName`:http://facebook.com `FileName`.robot```
+`robot -v [VariableName]:http://facebook.com [FileName].robot`
 
 
 ## Note
