@@ -5,6 +5,7 @@ Suite Setup  เข้าไปยังหน้าค้นหาของ goo
 Suite Teardown  Close Browser
 Test Teardown  กลับไปยังหน้าค้นหา
 Test Template  Flow search in google
+Default Tags  v4
 
 *** Variables ***
 ${URL}    http://google.com
