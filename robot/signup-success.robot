@@ -2,6 +2,7 @@
 # Library    FakerLibrary   # เอาไว้  Fake ข้อมูล Test
 Library  SeleniumLibrary
 Resource  ../resource/signup-success-resource.robot
+Resource  ../resource/thankyou-resource.robot
 Suite Setup  Open Signup Page
 Suite Teardown  Close Browser
 
@@ -28,8 +29,8 @@ Open Signup Page
     signup-success-resource.Fill in Zipcode "${zipcode}"
 
 Submit
-    Click Button    id:signup
+    signup-success-resource.Sign up
 
 ผลการสมัครสำเร็จ แสดงคำว่า Thank you
-    Wait Until Page Contains    Thank you!
+    thankyou-resource.Thank you
     

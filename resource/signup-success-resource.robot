@@ -13,3 +13,6 @@ Fill in Address "${address}"
 
 Fill in Zipcode "${zipcode}"
     Input Text    id:zipcode    ${zipcode}
+
+Sign up
+    Click Button    id:signup
