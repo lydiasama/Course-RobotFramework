@@ -1,5 +1,9 @@
 
 *** Keywords ***
+เข้าไปยังหน้าค้นหาของ google
+    Open Browser    ${URL}    browser=chrome
+    Maximize Browser Window
+    
 ค้นหาคำว่า "${keyword}"   # เอา argument ยัดเข้าไปใน keyword โดยเน้น keyword โดยการใส่ "" -> เว้นแค่ space เดียว  //แนะนำแบบนี้
     Input Text    name:q    ${keyword}
     Press Keys    name:q    ENTER
