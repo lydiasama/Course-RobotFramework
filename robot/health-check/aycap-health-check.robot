@@ -1,6 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-# Test Teardown  Close Browser
+Test Teardown  Close Browser
 
 *** Variables ***
 ${URL}    https://forms.office.com/Pages/ResponsePage.aspx?id=FMYTxoJu1EqDB6POlzKp-IDsoD5e39hJslpqkYNwZ0hUNDA5VUpFR08zNjlCV1NPNk5US0kzM1lNMC4u&qrcode=true
